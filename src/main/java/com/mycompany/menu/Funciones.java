@@ -12,12 +12,18 @@ public class Funciones {
     public boolean esNumero(String numero){
     try{
         int prueba = Integer.valueOf(numero);
+        if (prueba < 0){
+            System.out.println("solo numeros positivos");
+            return false;
+            }
         return true;
         }
     catch(NumberFormatException e){
+        System.err.println("error al ingresar el numero");
         return false;
         }
     }
+    
     public int leernumero(){
     Scanner scanner = new Scanner(System.in);
     int condicion = 0;
@@ -30,6 +36,7 @@ public class Funciones {
         }
         return condicion;
     }
+    
     public int uno( int n){
         int suma = 0;
         for(int i = 1; i <= n; i++){
@@ -37,13 +44,16 @@ public class Funciones {
         }
         return suma;
     }
+    
     public int doss( int n){
-        int suma = 1;
-        for(;1 < n; n--){
-            suma = suma * n;
+    if (n == 0 || n == 1){
+        return 1;
         }
-        return suma;
+    else{
+        return n * doss(n-1);
+        }
     }
+    
     public int tres(int base , int exponente){
         int resultado = 1;
         for (int i = 0; i < exponente; i++ ){
@@ -51,6 +61,7 @@ public class Funciones {
             }
         return resultado;
     }
+    
     public int cuatro(int n){
         int casos = 0;
         for(int i = 1; i < n;i++){
@@ -60,6 +71,7 @@ public class Funciones {
         }
         return casos;
     }
+    
     public int cinco(int ano, int aumento){
         if (aumento == 100){
             return ano % aumento;
@@ -68,6 +80,7 @@ public class Funciones {
             return cinco(ano, 100);
         }
     }
+    
     public int seis(int numero, int i, int casos){
         if (numero < i){
             return casos;
@@ -79,10 +92,12 @@ public class Funciones {
             return seis(numero, i+1, casos);
         }
     }
+    
     public String primo(int casos){
         String eresOnoEres = (casos != 2) ? "es primo":"no es primo";
         return eresOnoEres;
     }
+    
     public int siete(int ano){
     int aumento = 1;
     while(aumento <= 100){
@@ -90,13 +105,15 @@ public class Funciones {
         }
     return ano % aumento;
     }
+    
     public int ocho(int n){
     int suma = 0;
     for (int i = 0; i <= n; i = i + 2 ){
         suma = suma + i;
-    }
+        }
     return suma;
-}
+    }
+    
     public int nueve(int n){
     if(n == 0){
        return 1;
