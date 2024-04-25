@@ -108,8 +108,14 @@ public class Funciones {
     
     public int ocho(int n){
     int suma = 0;
-    for (int i = 0; i <= n; i = i + 2 ){
-        suma = suma + i;
+    while(true){
+        if (n == 0){
+            break;
+            }
+        if ( (n % 10) % 2 == 0){
+            suma = suma + (n % 10);
+        }
+        n = n / 10;
         }
     return suma;
     }
