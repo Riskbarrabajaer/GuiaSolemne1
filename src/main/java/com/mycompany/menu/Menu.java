@@ -34,10 +34,8 @@ public class Menu {
         case 3:
             System.out.println("3. la potencia de un numero");
             System.out.println("nesecitamos una base");
-            System.out.print("RESPUESTA: ");
             int r3 = Fun.leernumero();
             System.out.println("nesecitamos un exponente");
-            System.out.print("RESPUESTA: ");
             int r3b = Fun.leernumero();
             System.out.print("RESPUESTA: ");
             System.out.println(Fun.tres(r3,r3b));
