@@ -49,7 +49,7 @@ public class Menu {
             System.out.println("5. verificar si un ano es biciesto");
             int r5 = Fun.leernumero();
             System.out.print("RESPUESTA: ");
-            System.out.println(Fun.cinco(r5, 1));
+            System.out.println(Fun.esbiciesto(Fun.cinco(r5, 1)));
             break;
 
         case 6:
